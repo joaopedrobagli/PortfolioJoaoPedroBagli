@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>João Pedro | Desenvolvedor Web</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <nav
+      class="fixed top-0 left-0 right-0 bg-black bg-opacity-90 backdrop-blur-md z-50 shadow-md"
+    >
+      <div
+        class="max-w-6xl mx-auto px-6 py-3 flex justify-between items-center"
+      >
+        <a href="#" class="text-white text-2xl font-bold">João Pedro</a>
+        <div class="space-x-6 text-white font-semibold">
+          <a href="#inicio" class="hover:text-indigo-400 transition">Início</a>
+          <a href="#sobre" class="hover:text-indigo-400 transition">Sobre</a>
+          <a href="#projetos" class="hover:text-indigo-400 transition"
+            >Projetos</a
+          >
+          <a href="#contato" class="hover:text-indigo-400 transition"
+            >Contato</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <main
+      id="inicio"
+      class="flex-grow h-screen flex items-center justify-center px-6 pt-24 text-center relative z-10"
+    >
+      <div class="max-w-3xl">
+        <h1
+          class="text-5xl md:text-6xl font-extrabold mb-6 leading-tight text-gradient"
+        >
+          João Pedro
+        </h1>
+        <p class="text-lg md:text-xl text-gray-400 mb-10">
+          Front-End Developer & Web Designer
+        </p>
+        <a href="#projetos" class="btn-outline-neon inline-block">
+          Ver Projetos ⟶
+        </a>
+        <div class="mt-16 text-gray-500 animate-bounce text-sm select-none">
+          ↓ Scroll
+        </div>
+      </div>
+    </main>
+
+    <section id="sobre" class="bg-gray-900 py-20 px-6 text-white">
+      <div
+        class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-14"
+      >
+        <!-- Imagem -->
+        <div class="w-full md:w-1/2 flex justify-center">
+          <img
+            src="img/jp.jpg"
+            alt="Foto João Pedro"
+            class="w-64 h-64 rounded-lg object-cover border-4 border-indigo-600 shadow-lg"
+          />
+        </div>
+
+        <!-- Conteúdo -->
+        <div class="w-full md:w-1/2">
+          <h2 class="text-5xl font-bold mb-6 text-indigo-400">Sobre Mim</h2>
+          <p class="text-gray-300 mb-6 leading-relaxed text-lg">
+            Olá! Sou
+            <span class="font-semibold text-indigo-400">João Pedro</span>, Sou
+            um profissional dedicado ao desenvolvimento de soluções
+            tecnológicas, apaixonado por transformar ideias em projetos
+            funcionais e eficientes.
+          </p>
+          <p class="text-gray-400 mb-8 leading-relaxed text-lg">HABILIDADES:</p>
+
+          <!-- Logos tecnologias -->
+          <div class="flex flex-wrap gap-8 items-center">
+            <!-- PHP -->
+            <div
+              class="flex flex-col items-center space-y-2 group cursor-default"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+                alt="PHP"
+                class="w-16 h-16 group-hover:scale-110 transition-transform duration-300"
+              />
+              <span class="text-gray-400 text-sm">PHP</span>
+            </div>
+
+            <!-- Next.js -->
+            <div
+              class="flex flex-col items-center space-y-2 group cursor-default"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg"
+                alt="Next.js"
+                class="w-20 h-10 group-hover:scale-110 transition-transform duration-300"
+              />
+              <span class="text-gray-400 text-sm">Next.js</span>
+            </div>
+            <!-- WordPress -->
+            <div
+              class="flex flex-col items-center space-y-2 group cursor-default"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg"
+                alt="WordPress"
+                class="w-16 h-16 group-hover:scale-110 transition-transform duration-300"
+              />
+              <span class="text-gray-400 text-sm">WordPress</span>
+            </div>
+            <!-- Vue.js -->
+            <div
+              class="flex flex-col items-center space-y-2 group cursor-default"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
+                alt="Vue.js"
+                class="w-16 h-16 group-hover:scale-110 transition-transform duration-300"
+              />
+              <span class="text-gray-400 text-sm">Vue.js</span>
+            </div>
+            <!-- Node.js -->
+            <div
+              class="flex flex-col items-center space-y-2 group cursor-default"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                alt="Node.js"
+                class="w-16 h-16 group-hover:scale-110 transition-transform duration-300"
+              />
+              <span class="text-gray-400 text-sm">Node.js</span>
+            </div>
+            <!-- React -->
+            <div
+              class="flex flex-col items-center space-y-2 group cursor-default"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                alt="React"
+                class="w-16 h-16 group-hover:scale-110 transition-transform duration-300"
+              />
+              <span class="text-gray-400 text-sm">React</span>
+            </div>
+            <!-- JavaScript -->
+            <div
+              class="flex flex-col items-center space-y-2 group cursor-default"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                alt="JavaScript"
+                class="w-16 h-16 group-hover:scale-110 transition-transform duration-300"
+              />
+              <span class="text-gray-400 text-sm">JavaScript</span>
+            </div>
+            <!-- MySQL -->
+            <div
+              class="flex flex-col items-center space-y-2 group cursor-default"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                alt="MySQL"
+                class="w-16 h-16 group-hover:scale-110 transition-transform duration-300"
+              />
+              <span class="text-gray-400 text-sm">MySQL</span>
+            </div>
+            <!-- HTML5 -->
+            <div
+              class="flex flex-col items-center space-y-2 group cursor-default"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                alt="HTML5"
+                class="w-16 h-16 group-hover:scale-110 transition-transform duration-300"
+              />
+              <span class="text-gray-400 text-sm">HTML5</span>
+            </div>
+            <!-- CSS3 -->
+            <div
+              class="flex flex-col items-center space-y-2 group cursor-default"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                alt="CSS3"
+                class="w-16 h-16 group-hover:scale-110 transition-transform duration-300"
+              />
+              <span class="text-gray-400 text-sm">CSS3</span>
+            </div>
+            <!-- React Native -->
+            <div
+              class="flex flex-col items-center space-y-2 group cursor-default"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                alt="React Native"
+                class="w-16 h-16 group-hover:scale-110 transition-transform duration-300"
+              />
+              <span class="text-gray-400 text-sm">React Native</span>
+            </div>
+          </div>
+
+          <a
+            href="img/Currículo João Pedro.pdf"
+            class="inline-block mt-10 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-8 py-3 rounded-full transition"
+          >
+            Baixar CV
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="projetos" class="bg-black py-24 px-6 text-white">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-5xl font-bold text-indigo-400 mb-12 text-center">
+          Meus Projetos
+        </h2>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div
+            class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300"
+          >
+            <video class="w-full h-48 object-cover" controls>
+              <source src="img/ecomer.mp4" type="video/mp4" />
+              Seu navegador não suporta vídeo.
+            </video>
+            <div class="p-5">
+              <h3 class="text-xl font-semibold">
+                WORDPRESS & ELEMENTOR & WOOCOMMERCE
+              </h3>
+            </div>
+          </div>
+
+          <div
+            class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300"
+          >
+            <video class="w-full h-48 object-cover" controls>
+              <source src="img/advocacia.mp4" type="video/mp4" />
+              Seu navegador não suporta vídeo.
+            </video>
+            <div class="p-5">
+              <h3 class="text-xl font-semibold">WORDPRESS & ELEMENTOR</h3>
+            </div>
+          </div>
+
+          <div
+            class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300"
+          >
+            <video class="w-full h-48 object-cover" controls>
+              <source src="img/loja.mp4" type="video/mp4" />
+              Seu navegador não suporta vídeo.
+            </video>
+            <div class="p-5">
+              <h3 class="text-xl font-semibold">WORDPRESS & ELEMENTOR</h3>
+            </div>
+          </div>
+
+          <div
+            class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300"
+          >
+            <img
+              src="img/bike.png"
+              alt="Projeto 2"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-5 flex flex-col justify-between h-40">
+              <h3 class="text-xl font-semibold mb-3">
+                HTML & CSS & JAVASCRIPT
+              </h3>
+              <a
+                href="https://lojabike.netlify.app/"
+                class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded-full text-sm text-center font-semibold transition"
+              >
+                Venha Conferir
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300"
+          >
+            <img
+              src="img/geradesa.png"
+              alt="Projeto 2"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-5 flex flex-col justify-between h-40">
+              <h3 class="text-xl font-semibold mb-3">
+                HTML & CSS & JAVASCRIPT
+              </h3>
+              <a
+                href="https://geradesafios.netlify.app/"
+                class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded-full text-sm text-center font-semibold transition"
+              >
+                Venha Conferir
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300"
+          >
+            <img
+              src="img/senha.png"
+              alt="Projeto 2"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-5 flex flex-col justify-between h-40">
+              <h3 class="text-xl font-semibold mb-3">
+                HTML & CSS & JAVASCRIPT
+              </h3>
+              <a
+                href="https://gerardordesenha.netlify.app/"
+                class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded-full text-sm text-center font-semibold transition"
+              >
+                Venha Conferir
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300"
+          >
+            <img
+              src="img/iphone.png"
+              alt="Projeto 2"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-5 flex flex-col justify-between h-40">
+              <h3 class="text-xl font-semibold mb-3">
+                HTML & CSS & JAVASCRIPT
+              </h3>
+              <a
+                href="https://landpromo.netlify.app/"
+                class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded-full text-sm text-center font-semibold transition"
+              >
+                Venha Conferir
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300"
+          >
+            <img
+              src="img/next.png"
+              alt="Projeto 1"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-5 flex flex-col justify-between h-40">
+              <h3 class="text-xl font-semibold mb-3">NEXT.JS & TAILWIND CSS</h3>
+              <a
+                href="https://nextprojeto.netlify.app/"
+                target="_blank"
+                class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded-full text-sm text-center font-semibold transition"
+              >
+                Venha Conferir
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300"
+          >
+            <img
+              src="img/image.png"
+              alt="Projeto 2"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-5 flex flex-col justify-between h-40">
+              <h3 class="text-xl font-semibold mb-3">
+                HTML & CSS & JAVASCRIPT
+              </h3>
+              <a
+                href="https://mundoinfo.netlify.app/"
+                class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded-full text-sm text-center font-semibold transition"
+              >
+                Venha Conferir
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="bg-gray-900 text-white py-16 px-6">
+      <div class="max-w-6xl mx-auto text-center">
+        <h2 class="text-4xl font-bold text-indigo-400 mb-4">
+          Entre em Contato
+        </h2>
+        <p class="text-lg text-gray-300 mb-12">
+          Me chame nas redes ou pelos dados abaixo.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div class="bg-gray-800 rounded-lg p-8 shadow-lg text-left space-y-4">
+            <div class="flex items-center space-x-4">
+              <i class="fas fa-user text-indigo-400 text-xl"></i>
+              <span>João Pedro</span>
+            </div>
+            <div class="flex items-center space-x-4">
+              <i class="fas fa-envelope text-indigo-400 text-xl"></i>
+              <span>joaobagli.pedro1506@gmail.com</span>
+            </div>
+            <div class="flex items-center space-x-4">
+              <i class="fas fa-map-marker-alt text-indigo-400 text-xl"></i>
+              <span>Pirapozinho - SP</span>
+            </div>
+          </div>
+          <div class="bg-gray-800 rounded-lg p-8 shadow-lg text-left space-y-6">
+            <a
+              href="https://wa.me/5518997823199"
+              target="_blank"
+              class="flex items-center space-x-4 hover:text-green-400 transition"
+            >
+              <i class="fab fa-whatsapp text-2xl text-green-400"></i>
+              <span class="text-lg">WhatsApp</span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/jo%C3%A3o-pedro-bagli-4b86b5247/"
+              target="_blank"
+              class="flex items-center space-x-4 hover:text-blue-400 transition"
+            >
+              <i class="fab fa-linkedin text-2xl text-blue-400"></i>
+              <span class="text-lg">LinkedIn</span>
+            </a>
+            <a
+              href="https://github.com/joaopedrobagli"
+              target="_blank"
+              class="flex items-center space-x-4 hover:text-gray-400 transition"
+            >
+              <i class="fab fa-github text-2xl text-white"></i>
+              <span class="text-lg">GitHub</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-400 text-center py-6">
+      <p class="text-sm">
+        &copy; 2025 João Pedro. Todos os direitos reservados.
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
