@@ -9,7 +9,119 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #000000, #1a1a1a, #111111);
+        color: white;
+        scroll-behavior: smooth;
+      }
+     
+      /* Texto com gradiente */
+      .text-gradient {
+        background: linear-gradient(90deg, #7c3aed, #3b82f6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      /* Botão estilizado */
+      .btn-outline-neon {
+        display: inline-block;
+        padding: 0.75rem 2rem;
+        font-weight: 700;
+        border: 2px solid #7c3aed;
+        border-radius: 9999px;
+        color: #7c3aed;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        user-select: none;
+        box-shadow: 0 0 8px #7c3aedaa;
+      }
+      
+      .btn-outline-neon:hover {
+        background-color: #7c3aed;
+        color: white;
+        box-shadow: 0 0 20px #7c3aedee;
+        transform: scale(1.05);
+      }
+
+      /* Animação bounce para o scroll */
+      @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(10px); }
+      }
+
+      .animate-bounce {
+        animation: bounce 2s infinite;
+      }
+      
+      /* Estilos para o menu mobile */
+      .mobile-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.95);
+        padding: 1rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+      }
+      
+      .mobile-menu.active {
+        display: flex;
+      }
+      
+      .mobile-menu a {
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      
+      .mobile-menu a:last-child {
+        border-bottom: none;
+      }
+      
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        cursor: pointer;
+      }
+      
+      .hamburger span {
+        height: 3px;
+        width: 100%;
+        background-color: white;
+        border-radius: 3px;
+        transition: all 0.3s ease;
+      }
+      
+      /* Quando o menu está ativo, transformar o hamburger em um X */
+      .hamburger.active span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+      }
+      
+      .hamburger.active span:nth-child(2) {
+        opacity: 0;
+      }
+      
+      .hamburger.active span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+      }
+      
+      /* Media query para dispositivos móveis */
+      @media (max-width: 768px) {
+        .desktop-menu {
+          display: none;
+        }
+        
+        .hamburger {
+          display: flex;
+        }
+      }
+    </style>
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap"
       rel="stylesheet"
@@ -23,7 +135,9 @@
         class="max-w-6xl mx-auto px-6 py-3 flex justify-between items-center"
       >
         <a href="#" class="text-white text-2xl font-bold">João Pedro</a>
-        <div class="space-x-6 text-white font-semibold">
+        
+        <!-- Menu Desktop (visível em telas maiores) -->
+        <div class="desktop-menu space-x-6 text-white font-semibold">
           <a href="#inicio" class="hover:text-indigo-400 transition">Início</a>
           <a href="#sobre" class="hover:text-indigo-400 transition">Sobre</a>
           <a href="#projetos" class="hover:text-indigo-400 transition"
@@ -33,6 +147,21 @@
             >Contato</a
           >
         </div>
+        
+        <!-- Hamburger Menu (visível em mobile) -->
+        <div class="hamburger" id="hamburger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      
+      <!-- Menu Mobile (aparece quando o hamburger é clicado) -->
+      <div class="mobile-menu" id="mobile-menu">
+        <a href="#inicio" class="hover:text-indigo-400 transition">Início</a>
+        <a href="#sobre" class="hover:text-indigo-400 transition">Sobre</a>
+        <a href="#projetos" class="hover:text-indigo-400 transition">Projetos</a>
+        <a href="#contato" class="hover:text-indigo-400 transition">Contato</a>
       </div>
     </nav>
 
@@ -563,6 +692,83 @@
       </p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+      // JavaScript para controlar o menu hamburger
+      document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.getElementById('hamburger-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        hamburger.addEventListener('click', function() {
+          mobileMenu.classList.toggle('active');
+          hamburger.classList.toggle('active');
+        });
+        
+        // Fechar o menu ao clicar em um link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+          link.addEventListener('click', function() {
+            mobileMenu.classList.remove('active');
+            hamburger.classList.remove('active');
+          });
+        });
+        
+        // Fechar o menu ao clicar fora dele
+        document.addEventListener('click', function(event) {
+          const isClickInsideMenu = mobileMenu.contains(event.target);
+          const isClickOnHamburger = hamburger.contains(event.target);
+          
+          if (!isClickInsideMenu && !isClickOnHamburger && mobileMenu.classList.contains('active')) {
+            mobileMenu.classList.remove('active');
+            hamburger.classList.remove('active');
+          }
+        });
+      });
+      
+      // Script para as partículas (mantido do código original)
+      const canvas = document.getElementById("particles");
+      if (canvas) {
+        const ctx = canvas.getContext("2d");
+        let particles = [];
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        window.onresize = () => {
+          canvas.width = window.innerWidth;
+          canvas.height = window.innerHeight;
+        };
+
+        for (let i = 0; i < 80; i++) {
+          particles.push({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            radius: Math.random() * 1.5 + 0.5,
+            dx: (Math.random() - 0.5) * 0.3,
+            dy: (Math.random() - 0.5) * 0.3,
+          });
+        }
+
+        function animateParticles() {
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          ctx.fillStyle = "#ffffff22";
+
+          particles.forEach(p => {
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+            ctx.fill();
+
+            p.x += p.dx;
+            p.y += p.dy;
+
+            if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
+            if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
+          });
+
+          requestAnimationFrame(animateParticles);
+        }
+
+        animateParticles();
+      }
+    </script>
   </body>
 </html>
