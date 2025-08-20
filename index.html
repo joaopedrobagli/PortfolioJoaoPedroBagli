@@ -2,166 +2,95 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>João Pedro | Desenvolvedor Web</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>João Pedro | Portfólio Avançado</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      body {
-        font-family: 'Poppins', sans-serif;
-        background: linear-gradient(135deg, #000000, #1a1a1a, #111111);
-        color: white;
-        scroll-behavior: smooth;
-      }
-     
-      /* Texto com gradiente */
-      .text-gradient {
-        background: linear-gradient(90deg, #7c3aed, #3b82f6);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-
-      /* Botão estilizado */
-      .btn-outline-neon {
-        display: inline-block;
-        padding: 0.75rem 2rem;
-        font-weight: 700;
-        border: 2px solid #7c3aed;
-        border-radius: 9999px;
-        color: #7c3aed;
-        transition: all 0.3s ease;
-        text-decoration: none;
-        user-select: none;
-        box-shadow: 0 0 8px #7c3aedaa;
-      }
-      
-      .btn-outline-neon:hover {
-        background-color: #7c3aed;
-        color: white;
-        box-shadow: 0 0 20px #7c3aedee;
-        transform: scale(1.05);
-      }
-
-      /* Animação bounce para o scroll */
-      @keyframes bounce {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(10px); }
-      }
-
-      .animate-bounce {
-        animation: bounce 2s infinite;
-      }
-      
-      /* Estilos para o menu mobile */
-      .mobile-menu {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.95);
-        padding: 1rem;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-      }
-      
-      .mobile-menu.active {
-        display: flex;
-      }
-      
-      .mobile-menu a {
-        padding: 0.75rem 1rem;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      }
-      
-      .mobile-menu a:last-child {
-        border-bottom: none;
-      }
-      
-      .hamburger {
-        display: none;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 30px;
-        height: 21px;
-        cursor: pointer;
-      }
-      
-      .hamburger span {
-        height: 3px;
-        width: 100%;
-        background-color: white;
-        border-radius: 3px;
-        transition: all 0.3s ease;
-      }
-      
-      /* Quando o menu está ativo, transformar o hamburger em um X */
-      .hamburger.active span:nth-child(1) {
-        transform: translateY(9px) rotate(45deg);
-      }
-      
-      .hamburger.active span:nth-child(2) {
-        opacity: 0;
-      }
-      
-      .hamburger.active span:nth-child(3) {
-        transform: translateY(-9px) rotate(-45deg);
-      }
-      
-      /* Media query para dispositivos móveis */
-      @media (max-width: 768px) {
-        .desktop-menu {
-          display: none;
-        }
-        
-        .hamburger {
-          display: flex;
-        }
-      }
-    </style>
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+    
   </head>
   <body class="flex flex-col min-h-screen">
-    <nav
-      class="fixed top-0 left-0 right-0 bg-black bg-opacity-90 backdrop-blur-md z-50 shadow-md"
-    >
-      <div
-        class="max-w-6xl mx-auto px-6 py-3 flex justify-between items-center"
-      >
-        <a href="#" class="text-white text-2xl font-bold">João Pedro</a>
-        
-        <!-- Menu Desktop (visível em telas maiores) -->
-        <div class="desktop-menu space-x-6 text-white font-semibold">
-          <a href="#inicio" class="hover:text-indigo-400 transition">Início</a>
-          <a href="#sobre" class="hover:text-indigo-400 transition">Sobre</a>
-          <a href="#projetos" class="hover:text-indigo-400 transition"
-            >Projetos</a
+    <div id="preloader">
+      <div class="loader"></div>
+    </div>
+
+    <div id="particles-js"></div>
+
+    <nav class="fixed top-0 left-0 right-0 glass z-50 py-3">
+      <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
+        <a href="https://joaopedrobagli.netlify.app/" class="signature-nav text-2xl">J</a>
+
+        <div class="desktop-menu space-x-8 text-white font-semibold">
+          <a
+            href="#inicio"
+            class="hover:text-indigo-400 transition relative group"
           >
-          <a href="#contato" class="hover:text-indigo-400 transition"
-            >Contato</a
+            Início
+            <span
+              class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 transition-all group-hover:w-full"
+            ></span>
+          </a>
+          <a
+            href="#sobre"
+            class="hover:text-indigo-400 transition relative group"
           >
+            Sobre
+            <span
+              class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 transition-all group-hover:w-full"
+            ></span>
+          </a>
+          <a
+            href="#projetos"
+            class="hover:text-indigo-400 transition relative group"
+          >
+            Projetos
+            <span
+              class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 transition-all group-hover:w-full"
+            ></span>
+          </a>
+          <a
+            href="#contato"
+            class="hover:text-indigo-400 transition relative group"
+          >
+            Contato
+            <span
+              class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 transition-all group-hover:w-full"
+            ></span>
+          </a>
         </div>
-        
-        <!-- Hamburger Menu (visível em mobile) -->
+
         <div class="hamburger" id="hamburger-menu">
           <span></span>
           <span></span>
           <span></span>
         </div>
       </div>
-      
-      <!-- Menu Mobile (aparece quando o hamburger é clicado) -->
+
       <div class="mobile-menu" id="mobile-menu">
-        <a href="#inicio" class="hover:text-indigo-400 transition">Início</a>
-        <a href="#sobre" class="hover:text-indigo-400 transition">Sobre</a>
-        <a href="#projetos" class="hover:text-indigo-400 transition">Projetos</a>
-        <a href="#contato" class="hover:text-indigo-400 transition">Contato</a>
+        <a href="#inicio" class="py-3 px-6 hover:bg-purple-900/30 transition"
+          >Início</a
+        >
+        <a href="#sobre" class="py-3 px-6 hover:bg-purple-900/30 transition"
+          >Sobre</a
+        >
+        <a href="#projetos" class="py-3 px-6 hover:bg-purple-900/30 transition"
+          >Projetos</a
+        >
+        <a href="#contato" class="py-3 px-6 hover:bg-purple-900/30 transition"
+          >Contato</a
+        >
       </div>
     </nav>
 
@@ -169,606 +98,652 @@
       id="inicio"
       class="flex-grow h-screen flex items-center justify-center px-6 pt-24 text-center relative z-10"
     >
-      <div class="max-w-3xl">
+      <div class="max-w-3xl glass rounded-2xl p-12 border border-white/10">
+        <div class="mb-6">
+          <div
+            class="w-32 h-32 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 p-1 mx-auto"
+          >
+            <img
+              src="img/jp.jpg"
+              alt="João Pedro"
+              class="w-full h-full rounded-full object-cover"
+            />
+          </div>
+        </div>
+
         <h1
-          class="text-5xl md:text-6xl font-extrabold mb-6 leading-tight text-gradient"
+          class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight text-gradient"
         >
           João Pedro
         </h1>
-        <p class="text-lg md:text-xl text-gray-400 mb-10">
-          Front-End Developer & Web Designer
-        </p>
-        <a href="#projetos" class="btn-outline-neon inline-block">
-          Ver Projetos ⟶
-        </a>
-        <div class="mt-16 text-gray-500 animate-bounce text-sm select-none">
-          ↓ Scroll
+
+        <div class="max-w-md mx-auto">
+          <p class="text-xl md:text-2xl text-gray-300 mb-8 typing-animation">
+            Front-End Developer & Web Designer
+          </p>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="#projetos" class="btn-neon">
+            Ver Projetos <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+          <a
+            href="#contato"
+            class="btn-neon bg-gradient-to-r from-purple-600 to-pink-600 border-0"
+          >
+            Contato <i class="fas fa-paper-plane ml-2"></i>
+          </a>
+        </div>
+
+        <div class="mt-16">
+          <div class="animate-bounce text-gray-400">
+            <i class="fas fa-chevron-down text-2xl"></i>
+          </div>
         </div>
       </div>
     </main>
 
-    <section id="sobre" class="bg-gray-900 py-20 px-6 text-white">
-      <div
-        class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-14"
-      >
-        <div class="w-full md:w-1/2 flex justify-center">
-          <img
-            src="img/jp.jpg"
-            alt="Foto João Pedro"
-            class="w-64 h-64 rounded-lg object-cover border-4 border-indigo-600 shadow-lg"
-          />
-        </div>
+    <section id="sobre" class="py-20 px-6 text-white relative">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-5xl font-bold mb-16 text-center text-gradient">
+          Sobre Mim
+        </h2>
 
-        <div class="w-full md:w-1/2">
-          <h2 class="text-5xl font-bold mb-6 text-indigo-400">Sobre Mim</h2>
-          <p class="text-gray-300 mb-6 leading-relaxed text-lg">
-            Olá! Sou
-            <span class="font-semibold text-indigo-400">João Pedro</span>, Sou
-            um profissional dedicado ao desenvolvimento de soluções
-            tecnológicas, apaixonado por transformar ideias em projetos
-            funcionais e eficientes.
-          </p>
-          <p class="text-gray-400 mb-8 leading-relaxed text-lg">HABILIDADES:</p>
-
-          <div class="flex flex-wrap gap-8 items-center">
-            <div
-              class="flex flex-col items-center space-y-2 group cursor-default"
-            >
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
-                alt="PHP"
-                class="w-16 h-16 group-hover:scale-110 transition-transform duration-300"
-              />
-              <span class="text-gray-400 text-sm">PHP</span>
-            </div>
-
-            <div
-              class="flex flex-col items-center space-y-2 group cursor-default"
-            >
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg"
-                alt="Next.js"
-                class="w-20 h-10 group-hover:scale-110 transition-transform duration-300"
-              />
-              <span class="text-gray-400 text-sm">Next.js</span>
-            </div>
-
-            <div
-              class="flex flex-col items-center space-y-2 group cursor-default"
-            >
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg"
-                alt="WordPress"
-                class="w-16 h-16 group-hover:scale-110 transition-transform duration-300"
-              />
-              <span class="text-gray-400 text-sm">WordPress</span>
-            </div>
-
-            <div
-              class="flex flex-col items-center space-y-2 group cursor-default"
-            >
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
-                alt="Vue.js"
-                class="w-16 h-16 group-hover:scale-110 transition-transform duration-300"
-              />
-              <span class="text-gray-400 text-sm">Vue.js</span>
-            </div>
-
-            <div
-              class="flex flex-col items-center space-y-2 group cursor-default"
-            >
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
-                alt="Node.js"
-                class="w-16 h-16 group-hover:scale-110 transition-transform duration-300"
-              />
-              <span class="text-gray-400 text-sm">Node.js</span>
-            </div>
-
-            <div
-              class="flex flex-col items-center space-y-2 group cursor-default"
-            >
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-                alt="React"
-                class="w-16 h-16 group-hover:scale-110 transition-transform duration-300"
-              />
-              <span class="text-gray-400 text-sm">React</span>
-            </div>
-
-            <div
-              class="flex flex-col items-center space-y-2 group cursor-default"
-            >
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                alt="JavaScript"
-                class="w-16 h-16 group-hover:scale-110 transition-transform duration-300"
-              />
-              <span class="text-gray-400 text-sm">JavaScript</span>
-            </div>
-
-            <div
-              class="flex flex-col items-center space-y-2 group cursor-default"
-            >
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
-                alt="MySQL"
-                class="w-16 h-16 group-hover:scale-110 transition-transform duration-300"
-              />
-              <span class="text-gray-400 text-sm">MySQL</span>
-            </div>
-
-            <div
-              class="flex flex-col items-center space-y-2 group cursor-default"
-            >
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-                alt="HTML5"
-                class="w-16 h-16 group-hover:scale-110 transition-transform duration-300"
-              />
-              <span class="text-gray-400 text-sm">HTML5</span>
-            </div>
-
-            <div
-              class="flex flex-col items-center space-y-2 group cursor-default"
-            >
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-                alt="CSS3"
-                class="w-16 h-16 group-hover:scale-110 transition-transform duration-300"
-              />
-              <span class="text-gray-400 text-sm">CSS3</span>
-            </div>
-
-            <div
-              class="flex flex-col items-center space-y-2 group cursor-default"
-            >
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-                alt="React Native"
-                class="w-16 h-16 group-hover:scale-110 transition-transform duration-300"
-              />
-              <span class="text-gray-400 text-sm">React Native</span>
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="flex justify-center">
+            <div class="relative">
+              <div
+                class="w-80 h-80 rounded-lg overflow-hidden border-4 border-transparent bg-gradient-to-r from-purple-600 to-pink-500 p-1"
+              >
+                <img
+                  src="img/jp.jpg"
+                  alt="João Pedro"
+                  class="w-full h-full object-cover rounded-lg"
+                />
+              </div>
+              <div
+                class="absolute -inset-4 bg-gradient-to-r from-purple-600 to-pink-500 rounded-lg blur-lg opacity-30 z-[-1]"
+              ></div>
             </div>
           </div>
 
-          <a
-            href="img/joao.pdf"
-            class="inline-block mt-10 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-8 py-3 rounded-full transition"
-          >
-            Baixar CV
-          </a>
+          <div>
+            <p class="text-gray-300 mb-6 leading-relaxed text-lg">
+              Olá! Sou
+              <span class="font-semibold text-gradient">João Pedro</span>, um
+              profissional dedicado ao desenvolvimento de soluções tecnológicas,
+              apaixonado por transformar ideias em projetos funcionais e
+              eficientes.
+            </p>
+
+            <div class="mb-8">
+              <h3 class="text-2xl font-bold mb-4 text-gradient">Habilidades</h3>
+
+              <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4">
+                <div
+                  class="flex flex-col items-center p-3 glass rounded-lg group hover:neon-shadow transition"
+                >
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+                    alt="PHP"
+                    class="w-10 h-10 mb-2 group-hover:scale-110 transition"
+                  />
+                  <span class="text-xs text-gray-400">PHP</span>
+                </div>
+
+                <div
+                  class="flex flex-col items-center p-3 glass rounded-lg group hover:neon-shadow transition"
+                >
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg"
+                    alt="Next.js"
+                    class="w-10 h-10 mb-2 group-hover:scale-110 transition"
+                  />
+                  <span class="text-xs text-gray-400">Next.js</span>
+                </div>
+
+                <div
+                  class="flex flex-col items-center p-3 glass rounded-lg group hover:neon-shadow transition"
+                >
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg"
+                    alt="WordPress"
+                    class="w-10 h-10 mb-2 group-hover:scale-110 transition"
+                  />
+                  <span class="text-xs text-gray-400">WordPress</span>
+                </div>
+
+                <div
+                  class="flex flex-col items-center p-3 glass rounded-lg group hover:neon-shadow transition"
+                >
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
+                    alt="Vue.js"
+                    class="w-10 h-10 mb-2 group-hover:scale-110 transition"
+                  />
+                  <span class="text-xs text-gray-400">Vue.js</span>
+                </div>
+
+                <div
+                  class="flex flex-col items-center p-3 glass rounded-lg group hover:neon-shadow transition"
+                >
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                    alt="MySQL"
+                    class="w-10 h-10 mb-2 group-hover:scale-110 transition"
+                  />
+                  <span class="text-xs text-gray-400">MySQL</span>
+                </div>
+
+                <div
+                  class="flex flex-col items-center p-3 glass rounded-lg group hover:neon-shadow transition"
+                >
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                    alt="HTML5"
+                    class="w-10 h-10 mb-2 group-hover:scale-110 transition"
+                  />
+                  <span class="text-xs text-gray-400">HTML5</span>
+                </div>
+
+                <div
+                  class="flex flex-col items-center p-3 glass rounded-lg group hover:neon-shadow transition"
+                >
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                    alt="CSS3"
+                    class="w-10 h-10 mb-2 group-hover:scale-110 transition"
+                  />
+                  <span class="text-xs text-gray-400">CSS3</span>
+                </div>
+
+                <div
+                  class="flex flex-col items-center p-3 glass rounded-lg group hover:neon-shadow transition"
+                >
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                    alt="React"
+                    class="w-10 h-10 mb-2 group-hover:scale-110 transition"
+                  />
+                  <span class="text-xs text-gray-400">React</span>
+                </div>
+
+                <div
+                  class="flex flex-col items-center p-3 glass rounded-lg group hover:neon-shadow transition"
+                >
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                    alt="JavaScript"
+                    class="w-10 h-10 mb-2 group-hover:scale-110 transition"
+                  />
+                  <span class="text-xs text-gray-400">JavaScript</span>
+                </div>
+
+                <div
+                  class="flex flex-col items-center p-3 glass rounded-lg group hover:neon-shadow transition"
+                >
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                    alt="Node.js"
+                    class="w-10 h-10 mb-2 group-hover:scale-110 transition"
+                  />
+                  <span class="text-xs text-gray-400">Node.js</span>
+                </div>
+              </div>
+            </div>
+
+            <a
+              href="img/Curríulo João Pedro.pdf"
+              class="btn-neon inline-flex items-center"
+            >
+              <i class="fas fa-download mr-2"></i> Baixar CV
+            </a>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="projetos" class="bg-black py-24 px-6 text-white">
+    <section id="projetos" class="py-20 px-6 text-white bg-gray-900/50">
       <div class="max-w-6xl mx-auto">
-        <h2 class="text-5xl font-bold text-indigo-400 mb-12 text-center">
+        <h2 class="text-5xl font-bold mb-16 text-center text-gradient">
           Meus Projetos
         </h2>
-        
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
 
-           <div
-            class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300"
-          >
-            <img
-              src="img/triax.png"
-              alt="Projeto 2"
-              class="w-full h-48 object-cover"
-            />
-            <div class="p-5 flex flex-col justify-between h-40">
-              <h3 class="text-xl font-semibold mb-3">
-                WORDPRESS & ELEMENTOR
-              </h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="card-3d glass rounded-xl overflow-hidden group">
+            <div class="h-48 overflow-hidden">
+              <img
+                src="img/triax.png"
+                alt="Projeto 3"
+                class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+              />
+            </div>
+            <div class="p-6">
+              <div class="mb-3">
+            <span class="project-tag">WordPress</span>
+            <span class="project-tag">Elementor</span>
+            <span class="project-tag">GSAP</span>
+        </div>
+              <p class="text-gray-400 mb-4">2025 - FINALIZADO</p>
               <a
                 href="https://www.triaxsolutions.com.br/"
-                class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded-full text-sm text-center font-semibold transition"
+                class="btn-neon text-sm py-2 px-4"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Ver Detalhes</a
               >
-                Venha Conferir
-              </a>
             </div>
           </div>
 
-          <div
-            class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300"
-          >
-            <video class="w-full h-48 object-cover" controls>
-              <source src="img/ecomer.mp4" type="video/mp4" />
-              Seu navegador não suporta vídeo.
-            </video>
-            <div class="p-5">
-              <h3 class="text-xl font-semibold">
-                WORDPRESS & ELEMENTOR & WOOCOMMERCE
-              </h3>
+          <div class="card-3d glass rounded-xl overflow-hidden">
+    <div class="video-container">
+        <video poster="img/dentimg.png" muted>
+            <source src="img/dent.mp4" type="video/mp4">
+            Seu navegador não suporta vídeos HTML5.
+        </video>
+        <div class="video-overlay">
+            <div class="play-btn-large" onclick="playVideo(this)">
+                <i class="fas fa-play"></i>
             </div>
-          </div>
+        </div>
+        <div class="video-indicator">
+            <i class="fas fa-play-circle mr-1"></i> Vídeo
+        </div>
+    </div>
+    <div class="p-5">
+      
+        <div class="mb-3">
+            <span class="project-tag">WordPress</span>
+            <span class="project-tag">Elementor</span>
+        </div>
+        <p class="text-gray-400 text-sm">2025 - FINALIZADO</p>
+       
+    </div>
+</div>
 
-          <div
-            class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300"
-          >
-            <video class="w-full h-48 object-cover" controls>
-              <source src="img/advocacia.mp4" type="video/mp4" />
-              Seu navegador não suporta vídeo.
-            </video>
-            <div class="p-5">
-              <h3 class="text-xl font-semibold">WORDPRESS & ELEMENTOR</h3>
+ <div class="card-3d glass rounded-xl overflow-hidden group">
+            <div class="h-48 overflow-hidden">
+              <img
+                src="img/next.png"
+                alt="Projeto 3"
+                class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+              />
             </div>
-          </div>
-
-          <div
-            class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300"
-          >
-            <video class="w-full h-48 object-cover" controls>
-              <source src="img/loja.mp4" type="video/mp4" />
-              Seu navegador não suporta vídeo.
-            </video>
-            <div class="p-5">
-              <h3 class="text-xl font-semibold">WORDPRESS & ELEMENTOR</h3>
-            </div>
-          </div>
-
-          
-          <div
-            class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300"
-          >
-            <video class="w-full h-48 object-cover" controls>
-              <source src="img/dent.mp4" type="video/mp4" />
-              Seu navegador não suporta vídeo.
-            </video>
-            <div class="p-5">
-              <h3 class="text-xl font-semibold">WORDPRESS & ELEMENTOR</h3>
-            </div>
-          </div>
-
-          
-          <div
-            class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300"
-          >
-            <video class="w-full h-48 object-cover" controls>
-              <source src="img/land.mp4" type="video/mp4" />
-              Seu navegador não suporta vídeo.
-            </video>
-            <div class="p-5">
-              <h3 class="text-xl font-semibold">WORDPRESS & ELEMENTOR</h3>
-            </div>
-          </div>
-
-          <div
-            class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300"
-          >
-            <video class="w-full h-48 object-cover" controls>
-              <source src="img/crud.mp4" type="video/mp4" />
-              Seu navegador não suporta vídeo.
-            </video>
-            <div class="p-5">
-              <h3 class="text-xl font-semibold">
-                HTML & TailwindCSS & JAVASCRIPT & PHP & MYSQL
-              </h3>
-            </div>
-          </div>
-
-          <div
-            class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300"
-          >
-            <img
-              src="img/livro.png"
-              alt="Projeto 2"
-              class="w-full h-48 object-cover"
-            />
-            <div class="p-5 flex flex-col justify-between h-40">
-              <h3 class="text-xl font-semibold mb-3">WORDPRESS & ELEMENTOR</h3>
-              
-            </div>
-          </div>
-
-          <div
-            class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300"
-          >
-            <img
-              src="img/imc.png"
-              alt="Projeto 2"
-              class="w-full h-48 object-cover"
-            />
-            <div class="p-5 flex flex-col justify-between h-40">
-              <h3 class="text-xl font-semibold mb-3">
-                REACTJS & REACT-BOOTSTRAP & JAVASCRIPT
-              </h3>
-              <a
-                href="https://github.com/joaopedrobagli/calculadora_imc.git"
-                class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded-full text-sm text-center font-semibold transition"
-              >
-                Venha Conferir
-              </a>
-            </div>
-          </div>
-
-          <div
-            class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300"
-          >
-            <img
-              src="img/bike.png"
-              alt="Projeto 2"
-              class="w-full h-48 object-cover"
-            />
-            <div class="p-5 flex flex-col justify-between h-40">
-              <h3 class="text-xl font-semibold mb-3">
-                HTML & CSS & JAVASCRIPT
-              </h3>
-              <a
-                href="https://lojabike.netlify.app/"
-                class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded-full text-sm text-center font-semibold transition"
-              >
-                Venha Conferir
-              </a>
-            </div>
-          </div>
-
-          <div
-            class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300"
-          >
-            <img
-              src="img/geradesa.png"
-              alt="Projeto 2"
-              class="w-full h-48 object-cover"
-            />
-            <div class="p-5 flex flex-col justify-between h-40">
-              <h3 class="text-xl font-semibold mb-3">
-                HTML & CSS & JAVASCRIPT
-              </h3>
-              <a
-                href="https://geradesafios.netlify.app/"
-                class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded-full text-sm text-center font-semibold transition"
-              >
-                Venha Conferir
-              </a>
-            </div>
-          </div>
-
-          <div
-            class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300"
-          >
-            <img
-              src="img/senha.png"
-              alt="Projeto 2"
-              class="w-full h-48 object-cover"
-            />
-            <div class="p-5 flex flex-col justify-between h-40">
-              <h3 class="text-xl font-semibold mb-3">
-                HTML & CSS & JAVASCRIPT
-              </h3>
-              <a
-                href="https://gerardordesenha.netlify.app/"
-                class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded-full text-sm text-center font-semibold transition"
-              >
-                Venha Conferir
-              </a>
-            </div>
-          </div>
-
-          <div
-            class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300"
-          >
-            <img
-              src="img/iphone.png"
-              alt="Projeto 2"
-              class="w-full h-48 object-cover"
-            />
-            <div class="p-5 flex flex-col justify-between h-40">
-              <h3 class="text-xl font-semibold mb-3">
-                HTML & CSS & JAVASCRIPT
-              </h3>
-              <a
-                href="https://landpromo.netlify.app/"
-                class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded-full text-sm text-center font-semibold transition"
-              >
-                Venha Conferir
-              </a>
-            </div>
-          </div>
-
-          <div
-            class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300"
-          >
-            <img
-              src="img/cadastro.png"
-              alt="Projeto 2"
-              class="w-full h-48 object-cover"
-            />
-            <div class="p-5 flex flex-col justify-between h-40">
-              <h3 class="text-xl font-semibold mb-3">REACT</h3>
-              <a
-                href="https://cadastroreact.netlify.app/"
-                class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded-full text-sm text-center font-semibold transition"
-              >
-                Venha Conferir
-              </a>
-            </div>
-          </div>
-
-          <div
-            class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300"
-          >
-            <img
-              src="img/next.png"
-              alt="Projeto 1"
-              class="w-full h-48 object-cover"
-            />
-            <div class="p-5 flex flex-col justify-between h-40">
-              <h3 class="text-xl font-semibold mb-3">NEXT.JS & TAILWIND CSS</h3>
+            <div class="p-6">
+              <div class="mb-3">
+            <span class="project-tag">Next.js</span>
+            <span class="project-tag">Tailwind Css</span>
+           
+        </div>
+              <p class="text-gray-400 mb-4">2025 - FINALIZADO</p>
               <a
                 href="https://nextprojeto.netlify.app/"
+                class="btn-neon text-sm py-2 px-4"
                 target="_blank"
-                class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded-full text-sm text-center font-semibold transition"
+                rel="noopener noreferrer"
+                >Ver Detalhes</a
               >
-                Venha Conferir
-              </a>
             </div>
           </div>
 
-          <div
-            class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300"
-          >
-            <img
-              src="img/image.png"
-              alt="Projeto 2"
-              class="w-full h-48 object-cover"
-            />
-            <div class="p-5 flex flex-col justify-between h-40">
-              <h3 class="text-xl font-semibold mb-3">
-                HTML & CSS & JAVASCRIPT
-              </h3>
+          <div class="card-3d glass rounded-xl overflow-hidden">
+    <div class="video-container">
+        <video poster="img/landimg.png" muted>
+            <source src="img/land.mp4" type="video/mp4">
+            Seu navegador não suporta vídeos HTML5.
+        </video>
+        <div class="video-overlay">
+            <div class="play-btn-large" onclick="playVideo(this)">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+        <div class="video-indicator">
+            <i class="fas fa-play-circle mr-1"></i> Vídeo
+        </div>
+    </div>
+    <div class="p-5">
+      
+        <div class="mb-3">
+            <span class="project-tag">WordPress</span>
+            <span class="project-tag">Elementor</span>
+        </div>
+        <p class="text-gray-400 text-sm">2025 - FINALIZADO</p>
+       
+    </div>
+</div>
+
+
+          <div class="card-3d glass rounded-xl overflow-hidden group">
+            <div class="h-48 overflow-hidden">
+              <img
+                src="img/senha.png"
+                alt="Projeto 3"
+                class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+              />
+            </div>
+            <div class="p-6">
+              <div class="mb-3">
+            <span class="project-tag">Html</span>
+            <span class="project-tag">Css</span>
+            <span class="project-tag">Javascript</span>
+           
+        </div>
+              <p class="text-gray-400 mb-4">2025 - FINALIZADO</p>
+              <a
+                href="https://gerardordesenha.netlify.app/"
+                class="btn-neon text-sm py-2 px-4"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Ver Detalhes</a
+              >
+            </div>
+          </div>
+
+           <div class="card-3d glass rounded-xl overflow-hidden">
+    <div class="video-container">
+        <video poster="img/advimg.png" muted>
+            <source src="img/advocacia.mp4" type="video/mp4">
+            Seu navegador não suporta vídeos HTML5.
+        </video>
+        <div class="video-overlay">
+            <div class="play-btn-large" onclick="playVideo(this)">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+        <div class="video-indicator">
+            <i class="fas fa-play-circle mr-1"></i> Vídeo
+        </div>
+    </div>
+    <div class="p-5">
+      
+        <div class="mb-3">
+            <span class="project-tag">WordPress</span>
+            <span class="project-tag">Elementor</span>
+        </div>
+        <p class="text-gray-400 text-sm">2025 - FINALIZADO</p>
+       
+    </div>
+</div>
+
+           <div class="card-3d glass rounded-xl overflow-hidden group">
+            <div class="h-48 overflow-hidden">
+              <img
+                src="img/bike.png"
+                alt="Projeto 3"
+                class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+              />
+            </div>
+            <div class="p-6">
+              <div class="mb-3">
+            <span class="project-tag">Html</span>
+            <span class="project-tag">Css</span>
+            <span class="project-tag">Javascript</span>
+           
+        </div>
+              <p class="text-gray-400 mb-4">2025 - FINALIZADO</p>
+              <a
+                href="https://lojabike.netlify.app/"
+                class="btn-neon text-sm py-2 px-4"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Ver Detalhes</a
+              >
+            </div>
+          </div>
+
+            <div class="card-3d glass rounded-xl overflow-hidden">
+    <div class="video-container">
+        <video poster="img/crudimg.png" muted>
+            <source src="img/crud.mp4" type="video/mp4">
+            Seu navegador não suporta vídeos HTML5.
+        </video>
+        <div class="video-overlay">
+            <div class="play-btn-large" onclick="playVideo(this)">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+        <div class="video-indicator">
+            <i class="fas fa-play-circle mr-1"></i> Vídeo
+        </div>
+    </div>
+    <div class="p-5">
+      
+        <div class="mb-3">
+            <span class="project-tag">Html</span>
+            <span class="project-tag">Tailwind Css</span>
+            <span class="project-tag">Javascript</span>
+            <span class="project-tag">PHP</span>
+            <span class="project-tag">Mysql</span>
+       
+        </div>
+        <p class="text-gray-400 text-sm">2025 - FINALIZADO</p>
+       
+    </div>
+</div>
+
+          <div class="card-3d glass rounded-xl overflow-hidden group">
+            <div class="h-48 overflow-hidden">
+              <img
+                src="img/imc.png"
+                alt="Projeto 3"
+                class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+              />
+            </div>
+            <div class="p-6">
+              <div class="mb-3">
+            <span class="project-tag">React.js</span>
+            <span class="project-tag">React-Bootstrap</span>
+            <span class="project-tag">Javascript</span>
+           
+        </div>
+              <p class="text-gray-400 mb-4">2025 - FINALIZADO</p>
+              <a
+                href="https://github.com/joaopedrobagli/calculadora_imc"
+                class="btn-neon text-sm py-2 px-4"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Ver Detalhes</a
+              >
+            </div>
+          </div>
+
+           <div class="card-3d glass rounded-xl overflow-hidden group">
+            <div class="h-48 overflow-hidden">
+              <img
+                src="img/image.png"
+                alt="Projeto 3"
+                class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+              />
+            </div>
+            <div class="p-6">
+              <div class="mb-3">
+              <span class="project-tag">Html</span>
+            <span class="project-tag">Css</span>
+            <span class="project-tag">Javascript</span>       
+        </div>
+              <p class="text-gray-400 mb-4">2025 - FINALIZADO</p>
               <a
                 href="https://mundoinfo.netlify.app/"
-                class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded-full text-sm text-center font-semibold transition"
+                class="btn-neon text-sm py-2 px-4"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Ver Detalhes</a
               >
-                Venha Conferir
-              </a>
             </div>
           </div>
+
+          <div class="card-3d glass rounded-xl overflow-hidden">
+    <div class="video-container">
+        <video poster="img/ecomimg.png" muted>
+            <source src="img/ecomer.mp4" type="video/mp4">
+            Seu navegador não suporta vídeos HTML5.
+        </video>
+        <div class="video-overlay">
+            <div class="play-btn-large" onclick="playVideo(this)">
+                <i class="fas fa-play"></i>
+            </div>
         </div>
+        <div class="video-indicator">
+            <i class="fas fa-play-circle mr-1"></i> Vídeo
+        </div>
+    </div>
+    <div class="p-5">
+      
+        <div class="mb-3">
+            <span class="project-tag">WordPress</span>
+            <span class="project-tag">Elementor</span>
+            <span class="project-tag">WooCommerce</span>
+        </div>
+        <p class="text-gray-400 text-sm">2025 - FINALIZADO</p>
+       
+    </div>
+</div>
+
+           <div class="card-3d glass rounded-xl overflow-hidden group">
+            <div class="h-48 overflow-hidden">
+              <img
+                src="img/iphone.png"
+                alt="Projeto 3"
+                class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+              />
+            </div>
+            <div class="p-6">
+              <div class="mb-3">
+              <span class="project-tag">Html</span>
+            <span class="project-tag">Css</span>
+            <span class="project-tag">Javascript</span>       
+        </div>
+              <p class="text-gray-400 mb-4">2025 - FINALIZADO</p>
+              <a
+                href="https://landpromo.netlify.app/"
+                class="btn-neon text-sm py-2 px-4"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Ver Detalhes</a
+              >
+            </div>
+          </div>
+
+
+          <div class="card-3d glass rounded-xl overflow-hidden group">
+            <div class="h-48 overflow-hidden">
+              <img
+                src="img/geradesa.png"
+                alt="Projeto 3"
+                class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+              />
+            </div>
+            <div class="p-6">
+               <div class="mb-3">
+            <span class="project-tag">Html</span>
+            <span class="project-tag">Css</span>
+            <span class="project-tag">Javascript</span>
+        </div>
+              <p class="text-gray-400 mb-4">2025 - FINALIZADO</p>
+              <a
+                href="https://geradesafios.netlify.app/"
+                class="btn-neon text-sm py-2 px-4"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Ver Detalhes</a
+              >
+            </div>
+          </div>
+  
       </div>
     </section>
 
-    <section id="contato" class="bg-gray-900 text-white py-16 px-6">
-      <div class="max-w-6xl mx-auto text-center">
-        <h2 class="text-4xl font-bold text-indigo-400 mb-4">
-          Entre em Contato
-        </h2>
-        <p class="text-lg text-gray-300 mb-12">
-          Me chame nas redes ou pelos dados abaixo.
+   
+             <section id="contato" class="py-20 px-6 text-white">
+    <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-5xl font-bold mb-16 text-gradient">Entre em Contato</h2>
+        
+        <p class="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
+            Entre em contato através dos canais abaixo:
         </p>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-          <div class="bg-gray-800 rounded-lg p-8 shadow-lg text-left space-y-4">
-            <div class="flex items-center space-x-4">
-              <i class="fas fa-user text-indigo-400 text-xl"></i>
-              <span>João Pedro</span>
-            </div>
-            <div class="flex items-center space-x-4">
-              <i class="fas fa-envelope text-indigo-400 text-xl"></i>
-              <span>joaobagli.pedro1506@gmail.com</span>
-            </div>
-            <div class="flex items-center space-x-4">
-              <i class="fas fa-map-marker-alt text-indigo-400 text-xl"></i>
-              <span>Pirapozinho - SP</span>
-            </div>
-          </div>
-          <div class="bg-gray-800 rounded-lg p-8 shadow-lg text-left space-y-6">
-            <a
-              href="https://wa.me/5518997823199"
-              target="_blank"
-              class="flex items-center space-x-4 hover:text-green-400 transition"
-            >
-              <i class="fab fa-whatsapp text-2xl text-green-400"></i>
-              <span class="text-lg">WhatsApp</span>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/jo%C3%A3o-pedro-bagli-4b86b5247/"
-              target="_blank"
-              class="flex items-center space-x-4 hover:text-blue-400 transition"
-            >
-              <i class="fab fa-linkedin text-2xl text-blue-400"></i>
-              <span class="text-lg">LinkedIn</span>
-            </a>
-            <a
-              href="https://github.com/joaopedrobagli"
-              target="_blank"
-              class="flex items-center space-x-4 hover:text-gray-400 transition"
-            >
-              <i class="fab fa-github text-2xl text-white"></i>
-              <span class="text-lg">GitHub</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
+        <div class="glass rounded-xl p-12 max-w-2xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-10 items-center">
+              
+                <div class="space-y-8">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-16 h-16 rounded-full bg-purple-900/30 flex items-center justify-center mb-4">
+                            <i class="fas fa-map-marker-alt text-2xl text-purple-400"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-lg">Localização</p>
+                            <p class="text-gray-400">Pirapozinho - SP</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-16 h-16 rounded-full bg-purple-900/30 flex items-center justify-center mb-4">
+                            <i class="fas fa-envelope text-2xl text-purple-400"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-lg">Email</p>
+                            <a href="mailto:joaobagli.pedro1506@gmail.com" class="text-gray-400 hover:text-purple-400 transition">
+                                joaobagli.pedro1506@gmail.com
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-16 h-16 rounded-full bg-purple-900/30 flex items-center justify-center mb-4">
+                            <i class="fas fa-phone text-2xl text-purple-400"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-lg">Telefone</p>
+                            <a href="tel:+5518997823199" class="text-gray-400 hover:text-purple-400 transition">
+                                (18) 99782-3199
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-    <footer class="bg-gray-900 text-gray-400 text-center py-6">
-      <p class="text-sm">
-        &copy; 2025 João Pedro. Todos os direitos reservados.
-      </p>
+               
+                <div class="space-y-8">
+                    <h3 class="text-2xl font-bold mb-8 text-gradient">Redes Sociais</h3>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <a href="https://wa.me/5518997823199" target="_blank" class="flex flex-col items-center p-4 glass rounded-lg hover:neon-shadow transition">
+                            <div class="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center mb-2">
+                                <i class="fab fa-whatsapp text-2xl text-green-400"></i>
+                            </div>
+                            <span class="text-sm text-gray-300">WhatsApp</span>
+                        </a>
+                        
+                        <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-bagli-4b86b5247/" target="_blank" class="flex flex-col items-center p-4 glass rounded-lg hover:neon-shadow transition">
+                            <div class="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center mb-2">
+                                <i class="fab fa-linkedin-in text-2xl text-blue-400"></i>
+                            </div>
+                            <span class="text-sm text-gray-300">LinkedIn</span>
+                        </a>
+                        
+                        <a href="https://github.com/joaopedrobagli" target="_blank" class="flex flex-col items-center p-4 glass rounded-lg hover:neon-shadow transition">
+                            <div class="w-12 h-12 rounded-full bg-gray-500/20 flex items-center justify-center mb-2">
+                                <i class="fab fa-github text-2xl text-gray-400"></i>
+                            </div>
+                            <span class="text-sm text-gray-300">GitHub</span>
+                        </a>
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+        
+
+    <footer class="py-8 text-center text-gray-400 glass">
+      <p>&copy; 2025 João Pedro. Todos os direitos reservados.</p>
     </footer>
 
-    <script>
-      // JavaScript para controlar o menu hamburger
-      document.addEventListener('DOMContentLoaded', function() {
-        const hamburger = document.getElementById('hamburger-menu');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        hamburger.addEventListener('click', function() {
-          mobileMenu.classList.toggle('active');
-          hamburger.classList.toggle('active');
-        });
-        
-        // Fechar o menu ao clicar em um link
-        const mobileLinks = mobileMenu.querySelectorAll('a');
-        mobileLinks.forEach(link => {
-          link.addEventListener('click', function() {
-            mobileMenu.classList.remove('active');
-            hamburger.classList.remove('active');
-          });
-        });
-        
-        // Fechar o menu ao clicar fora dele
-        document.addEventListener('click', function(event) {
-          const isClickInsideMenu = mobileMenu.contains(event.target);
-          const isClickOnHamburger = hamburger.contains(event.target);
-          
-          if (!isClickInsideMenu && !isClickOnHamburger && mobileMenu.classList.contains('active')) {
-            mobileMenu.classList.remove('active');
-            hamburger.classList.remove('active');
-          }
-        });
-      });
-      
-      // Script para as partículas (mantido do código original)
-      const canvas = document.getElementById("particles");
-      if (canvas) {
-        const ctx = canvas.getContext("2d");
-        let particles = [];
 
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
+    
 
-        window.onresize = () => {
-          canvas.width = window.innerWidth;
-          canvas.height = window.innerHeight;
-        };
+   
 
-        for (let i = 0; i < 80; i++) {
-          particles.push({
-            x: Math.random() * canvas.width,
-            y: Math.random() * canvas.height,
-            radius: Math.random() * 1.5 + 0.5,
-            dx: (Math.random() - 0.5) * 0.3,
-            dy: (Math.random() - 0.5) * 0.3,
-          });
-        }
-
-        function animateParticles() {
-          ctx.clearRect(0, 0, canvas.width, canvas.height);
-          ctx.fillStyle = "#ffffff22";
-
-          particles.forEach(p => {
-            ctx.beginPath();
-            ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-            ctx.fill();
-
-            p.x += p.dx;
-            p.y += p.dy;
-
-            if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
-            if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
-          });
-
-          requestAnimationFrame(animateParticles);
-        }
-
-        animateParticles();
-      }
-    </script>
+      <script src="js/script.js"></script>
   </body>
 </html>
