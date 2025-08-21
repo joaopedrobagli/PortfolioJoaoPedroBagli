@@ -140,22 +140,22 @@
         };
         document.head.append(script);
       });
-   function playVideo(element) {
-
+ function playVideo(element) {
+   
     const videoContainer = element.closest('.video-container');
     const video = videoContainer.querySelector('video');
-    const overlay = videoContainer.querySelector('.video-overlay');
+    const playBtn = videoContainer.querySelector('.play-btn-large');
     
     if (video.paused) {
         video.play();
         videoContainer.classList.add('playing');
-        
-        element.innerHTML = '<i class="fas fa-pause"></i>';
+   
+        playBtn.innerHTML = '<i class="fas fa-pause"></i>';
     } else {
         video.pause();
         videoContainer.classList.remove('playing');
-        
-        element.innerHTML = '<i class="fas fa-play"></i>';
+     
+        playBtn.innerHTML = '<i class="fas fa-play"></i>';
     }
 }
 
@@ -169,6 +169,24 @@ document.querySelectorAll('.video-container video').forEach(video => {
     });
 });
 
+document.querySelectorAll('.play-btn-large').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const videoContainer = this.closest('.video-container');
+        const video = videoContainer.querySelector('video');
+        const playBtn = this;
+        
+        if (video.paused) {
+            video.play();
+            videoContainer.classList.add('playing');
+            playBtn.innerHTML = '<i class="fas fa-pause"></i>';
+        } else {
+            video.pause();
+            videoContainer.classList.remove('playing');
+            playBtn.innerHTML = '<i class="fas fa-play"></i>';
+        }
+    });
+});
 
 document.addEventListener('click', function(e) {
     if (!e.target.closest('.video-container')) {
@@ -181,3 +199,4 @@ document.addEventListener('click', function(e) {
         });
     }
 });
+

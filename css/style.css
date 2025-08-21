@@ -300,6 +300,7 @@
     cursor: pointer;
     box-shadow: 0 0 30px rgba(168, 85, 247, 0.9);
     transition: transform 0.2s ease;
+      pointer-events: none;
 }
 
 .play-btn-large:hover {
@@ -310,6 +311,7 @@
     color: white;
     font-size: 2.5rem;
     margin-left: 5px;
+    pointer-events: auto;
 }
 
 .video-indicator {
@@ -335,5 +337,8 @@
     font-size: 0.75rem;
     margin-right: 0.5rem;
     margin-bottom: 0.5rem;
-}
+
+  }
+
+  
     
